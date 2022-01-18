@@ -98,6 +98,11 @@
     background: darkgreen; /*temp color for visibility*/
 }
 
+.battle-pic-resize{
+    height: 150px;
+    width: 150px;
+}
+
 #player-life{
     display:flex;
     flex-direction: column;
@@ -136,6 +141,9 @@
 
 .inside-battle-choice{
     background: darkmagenta;/*temp color for visibility*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 180px;
     width: 220px;
 }
