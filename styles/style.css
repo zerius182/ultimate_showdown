@@ -37,7 +37,10 @@
 #players-and-choices{
     display: flex;
     background: crimson;/*temp color for visibility*/
+    justify-content: space-around;
+    align-items: center;
     height: 300px;
+    margin:20px;
 }
 
 #player-moves{
@@ -61,4 +64,23 @@
 #footer, p{
     font-size: 25px;
     padding: 5px;
+}
+
+.inside-pandc{
+    background: darkgoldenrod;/*temp color for visibility*/
+    height: 200px;
+    width: 200px;
+}
+
+#battle-choices{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+}
+
+.inside-battle-choice{
+    background: darkmagenta;/*temp color for visibility*/
+    height: 180px;
+    width: 220px;
 }
