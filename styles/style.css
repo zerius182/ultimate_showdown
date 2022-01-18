@@ -43,14 +43,24 @@
     margin:20px;
 }
 
-#player-moves{
+#move-container{
     display: flex;
-    background:darkmagenta;/*temp color for visibility*/
+    justify-content: center;
     height: 150px;
+    background:darkmagenta;/*temp color for visibility*/
 }
 
-#battle-log{
+#player-moves{
+    width: 600px;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#battle-log-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: darkorange;/*temp color for visibility*/
     height:170px;
 
@@ -83,4 +93,26 @@
     background: darkmagenta;/*temp color for visibility*/
     height: 180px;
     width: 220px;
+}
+
+.inside-moves{
+    background: cyan;/*temp color for visibility*/
+    width:120px;
+    height:120px;
+}
+
+#battle-log{
+    width: 800px;
+    height:130px;
+    background: chartreuse;/*temp color for visibility*/
+}
+
+#progress-log{
+    width: 200px;
+    height: 130px;
+    background: chartreuse;/*temp color for visibility*/
+}
+
+.inside-battle-log{
+    margin: 20px;
 }
