@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "AnglicanText";
+    src: url(/fonts/AnglicanText.ttf);
+}
+
+html, body{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+#main-content-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#title-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: chartreuse;/*Temp Colour for visibility*/
+    height: 150px;
+}
+
+#title-box, h1{
+    font-family: "AnglicanText";
+    font-size: 100px;
+}
