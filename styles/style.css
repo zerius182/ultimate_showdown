@@ -18,8 +18,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: chartreuse;/*Temp Colour for visibility*/
     height: 100px;
+    background: url("/pictures/scroll.jpg");
 }
 
 #title-box, h1{
@@ -72,21 +72,66 @@
 }
 
 #footer, p{
+    font-family: "AnglicanText";
     font-size: 25px;
     padding: 5px;
 }
 
-.inside-pandc{
+#player-character{
     background: darkgoldenrod;/*temp color for visibility*/
-    height: 200px;
-    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:200px;
+    width: 300px;
+}
+
+#player-pic{
+    height: 150px;
+    width: 150px;
+    background: darkgreen; /*temp color for visibility*/
+}
+
+#pc-pic{
+    height: 150px;
+    width: 150px;
+    background: darkgreen; /*temp color for visibility*/
+}
+
+#player-life{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    width: 75px;
+    background: crimson; /*temp color for visibility*/
+}
+
+#pc-life{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    width: 75px;
+    background: crimson; /*temp color for visibility*/
+}
+
+#pc-character{
+    background: darkgoldenrod;/*temp color for visibility*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:200px;
+    width: 300px;
 }
 
 #battle-choices{
+    background: darkgoldenrod;/*temp color for visibility*/
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 600px;
+    width: 700px;
+    height:200px;
 }
 
 .inside-battle-choice{
@@ -96,7 +141,6 @@
 }
 
 .inside-moves{
-    background: cyan;/*temp color for visibility*/
     width:120px;
     height:120px;
 }
@@ -115,4 +159,9 @@
 
 .inside-battle-log{
     margin: 20px;
+}
+
+.pic-resize{
+    width:120px;
+    height:120px;
 }
