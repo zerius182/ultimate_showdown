@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shield, Wand, Sword!</title>
+    <title>Ultimate Showdown!</title>
     <link rel="icon" href="pictures/logo_image.jpg">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <audio autoplay loop src="music/epic_battle_music2.mp3">Musicg</audio>
     <div id="main-content-container">
         <header>
             <div id="title-box">
-                <h1>Shield, Wand, Sword</h1>
+                <h1>Ultimate Showdown of Ultimate Destiny!!!</h1>
             </div>
         </header>
         <div id="battle-arena">
@@ -22,7 +23,7 @@
                         <img src="pictures/player.jpg" class="battle-pic-resize"alt="player character">
                     </div>
                     <div id="player-life">
-                        <u><p>LIFE</p></u>
+                        <!--<u><p>LIFE</p></u>-->
                         <img src="pictures/player-life.png" class="lifesize"alt="heart">
                         <img src="pictures/player-life.png" class="lifesize"alt="heart">
                         <img src="pictures/player-life.png" class="lifesize"alt="heart">
@@ -40,7 +41,7 @@
                 </div>
                 <div id="pc-character">
                     <div id="pc-life">
-                        <u><p>LIFE</p></u>
+                        <!--<u><p>LIFE</p></u>-->
                         <img src="/pictures/enemy-life.png"class="lifesize" alt="heart">
                         <img src="/pictures/enemy-life.png"class="lifesize" alt="heart">
                         <img src="/pictures/enemy-life.png"class="lifesize" alt="heart">
@@ -49,21 +50,25 @@
 
                     </div>
                     <div id="pc-pic">
-                        <img src="pictures/pc.png" class="battle-pic-resize"alt="pc character">
+                        <img src="pictures/pc.png"class="battle-pic-resize"alt="pc character">
                     </div>
                 </div>
             </div>
             <div id="move-container">
                 <div id="player-moves">
-                    <div id="shield"class="inside-moves"><img src="pictures/shield.png" alt="shield"id="shield"class="pic-resize"></div>
-                    <div id="wand" class="inside-moves"><img src="pictures/wand.png" alt="wand"id="wand"class="pic-resize"></div>
-                    <div id="sword" class="inside-moves"><img src="pictures/sword.png" alt="sword"id="sword"class="pic-resize"></div>
+                    <div class="inside-moves"><img src="pictures/shield.png" alt="shield"id="shield"class="pic-resize"></div>
+                    <div class="inside-moves"><img src="pictures/wand.png" alt="wand"id="wand"class="pic-resize"></div>
+                    <div class="inside-moves"><img src="pictures/sword.png" alt="sword"id="sword"class="pic-resize"></div>
                 </div>
             </div>
         </div>
         <div id="battle-log-container">
-            <div id="battle-log" class="inside-battle-log">Battle log</div>
-            <div id="progress-log"class="inside-battle-log">Progress</div>
+            <div id="battle-log" class="inside-battle-log">
+                <p>The air is electirifed as you step up to face the nigh unkillable Lord of Darkness in an epic duel to the death! Only sheer tenacity will see your foe die 99 times, leaving him vanquished for good. Before you know it your foe charges forth and you're forced to make your first move....</p></div>
+            <div id="progress-log"class="inside-battle-log">
+                <u><h2>Slaughter Count</h2></u>
+                <p id="progress-score">0</p>
+            </div>
         </div>
         <footer>
             <div id="footer">
