@@ -43,14 +43,20 @@
     margin: 20px 20px 0px 20px;
 }
 
+#players-and-choices p{
+    font-family: "AnglicanText";
+    font-size: 20px;
+}
+
 #move-container{
     display: flex;
     justify-content: center;
     height: 150px;
+    border-top: black solid 2px;
 }
 
 #player-moves{
-    width: 600px;
+    width: 700px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -66,71 +72,67 @@
 }
 #footer{
     display: flex;
-    background: darkred;/*temp color for visibility*/
+    background: black;
     justify-content: center;
 }
 
-#footer, p{
+#footer p{
     font-family: "AnglicanText";
     font-size: 25px;
     padding: 5px;
+    color: white;
 }
 
 #player-character{
-    background: darkgoldenrod;/*temp color for visibility*/
     display: flex;
-    justify-content: center;
-    align-items: center;
     height:200px;
     width: 300px;
+    margin-left: 150px;
 }
 
 #player-pic{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     background: darkgreen; /*temp color for visibility*/
 }
 
 #pc-pic{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     background: darkgreen; /*temp color for visibility*/
 }
 
 .battle-pic-resize{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
 }
 
 #player-life{
     display:flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: 150px;
+    height: 200px;
     width: 75px;
-    background: crimson; /*temp color for visibility*/
 }
 
 #pc-life{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: 150px;
+    height: 200px;
     width: 75px;
-    background: crimson; /*temp color for visibility*/
 }
 
 #pc-character{
-    background: darkgoldenrod;/*temp color for visibility*/
     display: flex;
-    justify-content: center;
-    align-items: center;
     height:200px;
     width: 300px;
+    margin-right: 150px;
 }
 
 #battle-choices{
-    background: darkgoldenrod;/*temp color for visibility*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -138,18 +140,31 @@
     height:200px;
 }
 
-.inside-battle-choice{
-    background: darkmagenta;/*temp color for visibility*/
+#player-choice-container, #pc-choice-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 180px;
-    width: 220px;
+    width: 180px;
+}
+
+.choice-resize{
+    height: 180px;
+    width: 180px;
 }
 
 .inside-moves{
     width:120px;
     height:120px;
+}
+
+.inside-moves :hover{
+    background: rgba(31, 31, 31, 0.356);
+}
+
+.lifesize{
+    width:30px;
+    height: 30px;
 }
 
 #battle-log{
