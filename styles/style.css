@@ -22,9 +22,10 @@
     background-image: url("/pictures/stone1.jpg");
 }
 
-#title-box, h1{
+#title-box h1{
     font-family: "AnglicanText";
     font-size: 70px;
+    color: rgb(122, 20, 20);
 }
 
 #battle-arena{
@@ -33,6 +34,7 @@
     height:450px;
     background-image: url("/pictures/scroll.jpg");
     background-size: cover;
+    
 }
 
 #players-and-choices{
@@ -46,13 +48,13 @@
 #players-and-choices p{
     font-family: "AnglicanText";
     font-size: 20px;
+    color: white;
 }
 
 #move-container{
     display: flex;
     justify-content: center;
     height: 150px;
-    border-top: black solid 2px;
 }
 
 #player-moves{
@@ -60,6 +62,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 #battle-log-container{
@@ -88,18 +91,21 @@
     height:200px;
     width: 300px;
     margin-left: 150px;
+    border: black solid 2px;
+    background: black;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.623);
 }
 
 #player-pic{
     height: 200px;
     width: 200px;
-    background: darkgreen; /*temp color for visibility*/
+    border-right: black solid 2px;
 }
 
 #pc-pic{
     height: 200px;
     width: 200px;
-    background: darkgreen; /*temp color for visibility*/
+    border-left: black solid 2px;
 }
 
 .battle-pic-resize{
@@ -110,7 +116,7 @@
 #player-life{
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 200px;
     width: 75px;
@@ -119,7 +125,7 @@
 #pc-life{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 200px;
     width: 75px;
@@ -130,6 +136,9 @@
     height:200px;
     width: 300px;
     margin-right: 150px;
+    border: black solid 2px;
+    background: black;
+    box-shadow: -5px 10px rgba(0, 0, 0, 0.623);
 }
 
 #battle-choices{
@@ -155,11 +164,7 @@
 
 .inside-moves{
     width:120px;
-    height:120px;
-}
-
-.inside-moves :hover{
-    background: rgba(31, 31, 31, 0.356);
+    height: 120px;
 }
 
 .lifesize{
@@ -168,15 +173,39 @@
 }
 
 #battle-log{
-    width: 800px;
+    width: 1000px;
     height:130px;
-    background: chartreuse;/*temp color for visibility*/
+    background: rgba(0, 0, 0, 0.623);
+    border: white solid 2px;
+    color: white;
+    border-radius: 5px;
+    font-family: "AnglicanText";
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+#battle-log p{
+    padding:20px;
 }
 
 #progress-log{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 130px;
-    background: chartreuse;/*temp color for visibility*/
+    background: rgba(0, 0, 0, 0.623);
+    border: white solid 2px;
+    color: white;
+    border-radius: 5px;
+    font-family: "AnglicanText";
+}
+
+#progress-score{
+    font-size: 40px;
 }
 
 .inside-battle-log{
