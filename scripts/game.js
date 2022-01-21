@@ -76,6 +76,7 @@ function resolveAttacks(playerAttack, villainAttack){
 }
 
 function attackPhase(){
+    musicPlayer.play();
     resolveAttacks(playerAttack, villainAttack);
     updateBattleComm(result);
     updateMoves(playerAttack, villainAttack);
