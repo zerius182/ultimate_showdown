@@ -7,9 +7,11 @@
     <title>Ultimate Showdown!</title>
     <link rel="icon" href="pictures/logo_image.jpg">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/vendor.js" defer></script>
+    <script src="scripts/game.js" defer></script>
 </head>
 <body>
-    <audio autoplay loop src="music/epic_battle_music2.mp3">Musicg</audio>
+    <audio autoplay loop src="music/epic_battle_music2.mp3">Music</audio>
     <div id="main-content-container">
         <header>
             <div id="title-box">
@@ -54,15 +56,15 @@
             </div>
             <div id="move-container">
                 <div id="player-moves">
-                    <div class="inside-moves"><img src="pictures/shield.png" alt="shield"id="shield"class="pic-resize"></div>
-                    <div class="inside-moves"><img src="pictures/wand.png" alt="wand"id="wand"class="pic-resize"></div>
-                    <div class="inside-moves"><img src="pictures/sword.png" alt="sword"id="sword"class="pic-resize"></div>
+                    <div class="inside-moves"><img src="pictures/shield.png" alt="shield"id="shield"class="pic-resize"onclick="shieldHit()"></div>
+                    <div class="inside-moves"><img src="pictures/wand.png" alt="wand"id="wand"class="pic-resize" onclick="wandHit()"></div>
+                    <div class="inside-moves"><img src="pictures/sword.png" alt="sword"id="sword"class="pic-resize"onclick="swordHit()"></div>
                 </div>
             </div>
         </div>
         <div id="battle-log-container">
             <div id="battle-log" class="inside-battle-log">
-                <p>The air is electirifed as you step up to face the nigh unkillable Lord of Darkness in an epic duel to the death! Only sheer tenacity will see your foe die 99 times, leaving him vanquished for good. Before you know it your foe charges forth and you're forced to make your first move....</p></div>
+                <p id="battle-commentary">The air is electirifed as you step up to face the nigh unkillable Lord of Darkness in an epic duel to the death! Only sheer tenacity will see your foe die 99 times, leaving him vanquished for good. Before you know it your foe charges forth and you're forced to make your first move....</p></div>
             <div id="progress-log"class="inside-battle-log">
                 <u><h2>Slaughter Count</h2></u>
                 <p id="progress-score">0</p>
