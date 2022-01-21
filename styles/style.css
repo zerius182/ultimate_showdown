@@ -28,6 +28,16 @@
     color: rgb(175, 31, 31);
 }
 
+#title-box h1 {
+    animation: color-change 1s infinite;
+  }
+  
+  @keyframes color-change {
+    0% { color: red; }
+    50% { color: orange; }
+    100% { color: red; }
+  }
+
 #battle-arena{
     display: flex;
     flex-direction: column;
