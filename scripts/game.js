@@ -28,6 +28,16 @@ function villainRoll(){
     villainAttack =  villianMoves[moveIndex];
 }
 
+function resolveDamage(victor){
+    if (victor === "villain"){
+        playerDamage();
+    }
+
+    else if (victor === "player"){
+        villainDamage();
+    }
+}
+
 function resolveAttacks(playerAttack, villainAttack){
     if (playerAttack === "wand" && villainAttack === "wand"){
         result = "You let out a desperate flurry of magic with your wand at the same time as the villain, the blasts collide in the air causing a huge explosion but neither of you take any damage.";
@@ -80,4 +90,5 @@ function attackPhase(){
     resolveAttacks(playerAttack, villainAttack);
     updateBattleComm(result);
     updateMoves(playerAttack, villainAttack);
+    resolveDamage(victor);
 }
