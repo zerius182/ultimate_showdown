@@ -58,7 +58,7 @@ function resolveAttacks(playerAttack, villainAttack){
     }
 
     else if (playerAttack === "shield" && villainAttack === "sword"){
-        result = "The villain lunges at you swinging his sword in a wild arc, you raise your shield deflecting the blow, causing the villain to stumble which you take advantage off with a huge blow to his head with your shield, causing a crushing wound to your opponent.";
+        result = "The villain lunges at you swinging his sword in a wild arc, you raise your shield deflecting the blow, causing the villain to stumble which you take advantage of with a huge blow to his head with your shield, causing a crushing wound to your opponent.";
         victor = "player";
         swordSound.play();
     }
@@ -95,10 +95,22 @@ function resolveAttacks(playerAttack, villainAttack){
     }
 }
 
+function resolveRound(){
+    if (playerLives < 0){
+        result = "You lie motionless on the floor, broken, bloodied, your life force fading away. As your vision turns black and sounds fade away you notice your opponent smirk as he sheathes his weapons and walks away from you, you have failed, 'the world is doomed' you think to yourself as you take your last, rattling breath.... "
+    }
+
+    else if (villainLives < 0 && slaughtered <99){
+        result = "Your opponent falls to the floor, beaten, his breath rattling in his throat as he takes his last breath. Almost instantly his eyes flick open with a look of pure hatred on his face and he scrambles back up with renewed vigour, you take a sip of vitality potion and prepare to fight again....."
+        moreSlaughter();
+    }
+}
+
 function attackPhase(){
     musicPlayer.play();
     resolveAttacks(playerAttack, villainAttack);
+    resolveDamage(victor);
+    resolveRound();
     updateBattleComm(result);
     updateMoves(playerAttack, villainAttack);
-    resolveDamage(victor);
 }
