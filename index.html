@@ -11,7 +11,7 @@
     <script src="scripts/game.js" defer></script>
 </head>
 <body>
-    <audio autoplay loop src="music/epic_battle_music2.mp3" id="music">Music</audio>
+    <audio loop src="music/epic_battle_music2.mp3" id="music-start">Music</audio>
     <audio src="music/shield.wav" id="shield-sound"></audio>
     <audio src="music/sword.mp3"id="sword-sound"></audio>
     <audio src="music/wand.wav"id="wand-sound"></audio>
@@ -70,7 +70,8 @@
                 <p id="battle-commentary">The air is electirifed as you step up to face the nigh unkillable Lord of Darkness in an epic duel to the death! Only sheer tenacity will see your foe die 99 times, leaving him vanquished for good. Before you know it your foe charges forth and you're forced to make your first move....</p></div>
             <div id="progress-log"class="inside-battle-log">
                 <u><h2>Slaughter Count</h2></u>
-                <p id="progress-score">0</p>
+                <p id="progress-score">49</p>
+                <img src="pictures/potion.png" alt="pot" id="potion"onclick="healPlayer()">
             </div>
         </div>
         <footer>
