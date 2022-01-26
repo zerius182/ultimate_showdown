@@ -6,6 +6,8 @@ const musicPlayerStart = document.getElementById("music-start");
 const swordSound = document.getElementById("sword-sound");
 const shieldSound = document.getElementById("shield-sound");
 const wandSound = document.getElementById("wand-sound");
+const healSound = document.getElementById("heal-sound");
+const groupHealSound = document.getElementById("group-heal");
 const healPot = document.getElementById("potion");
 
 let playerLives = 4;
@@ -50,6 +52,7 @@ function healCharacters(){
         playerAdd.style.display = "block";
         villainAdd.style.display = "block";
     }
+    groupHealSound.play();
     console.log(playerLives, villainLives);    
 }
 
@@ -60,5 +63,6 @@ function healPlayer(){
         playerAdd.style.display = "block";
         healPot.style.display = "none";
     }
+    healSound.play();
     console.log(playerLives, villainLives);
 }

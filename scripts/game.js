@@ -105,18 +105,18 @@ function resolveRound(){
         result = "Your opponent falls to the floor, beaten, his breath rattling in his throat as he takes his last breath. Almost instantly his eyes flick open with a look of pure hatred on his face and he scrambles back up with renewed vigour, you take a sip of vitality potion and prepare to fight again....."
         moreSlaughter();
         healCharacters();
+        if (slaughtered >= 50 && needsChange){
+            needsChange = false;
+            musicPlayerStart.src = "music/epic_battle_music.mp3";
+        }
     }
 }
 
 function attackPhase(){
-    if (slaughtered >= 50 && needsChange){
-        needsChange = false;
-        musicPlayerStart.src = "music/epic_battle_music.mp3";
-    }
-    musicPlayerStart.play();
     resolveAttacks(playerAttack, villainAttack);
     resolveDamage(victor);
     resolveRound();
+    musicPlayerStart.play();
     updateBattleComm(result);
     updateMoves(playerAttack, villainAttack);
     console.log(playerLives, villainLives);
