@@ -98,10 +98,12 @@ function resolveAttacks(playerAttack, villainAttack){
 
 function resolveRound(){
     if (playerLives < 0){
+        heroDeathSound.play();
         result = "You lie motionless on the floor, broken, bloodied, your life force fading away. As your vision turns black and sounds fade away you notice your opponent smirk as he sheathes his weapons and walks away from you, you have failed, 'the world is doomed' you think to yourself as you take your last, rattling breath.... "
     }
 
     else if (villainLives < 0 && slaughtered <99){
+        villainDeathSound.play();
         result = "Your opponent falls to the floor, beaten, his breath rattling in his throat as he takes his last breath. Almost instantly his eyes flick open with a look of pure hatred on his face and he scrambles back up with renewed vigour, you take a sip of vitality potion and prepare to fight again....."
         moreSlaughter();
         healCharacters();

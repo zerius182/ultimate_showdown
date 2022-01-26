@@ -8,6 +8,8 @@ const shieldSound = document.getElementById("shield-sound");
 const wandSound = document.getElementById("wand-sound");
 const healSound = document.getElementById("heal-sound");
 const groupHealSound = document.getElementById("group-heal");
+const villainDeathSound = document.getElementById("villain-death");
+const heroDeathSound = document.getElementById("hero-death");
 const healPot = document.getElementById("potion");
 
 let playerLives = 4;
