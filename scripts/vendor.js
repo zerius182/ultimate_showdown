@@ -11,10 +11,14 @@ const groupHealSound = document.getElementById("group-heal");
 const villainDeathSound = document.getElementById("villain-death");
 const heroDeathSound = document.getElementById("hero-death");
 const healPot = document.getElementById("potion");
+const shield = document.getElementById("shield");
+const sword = document.getElementById("sword");
+const wand = document.getElementById("wand");
 
 let playerLives = 4;
 let villainLives = 4;
 let slaughtered = parseInt(slaughterCount.innerHTML);
+let end = false;
 
 function updateBattleComm(result){
     battleComm.innerHTML = result;
@@ -67,4 +71,20 @@ function healPlayer(){
     }
     healSound.play();
     console.log(playerLives, villainLives);
+}
+
+function refreshGame(){
+    healCharacters();
+    musicPlayerStart.src = "/music/epic_battle_music2.mp3";
+    musicPlayerStart.play();
+    slaughtered = 0;
+    slaughterCount.innerHTML = slaughtered;
+    battleComm.innerHTML = "The air is electrified as you step up to face the nigh unkillable Lord of Darkness in an epic duel to the death! Only sheer tenacity will see your foe die 99 times, leaving him vanquished for good. Before you know it your foe charges forth and you're forced to make your first move....";
+    playerChoice.src= `/pictures/question.png`;
+    villainChoice.src = `/pictures/question.png`;
+    villainChoice.style.transform = "scaleX(1)";
+    shield.style.display = "block";
+    sword.style.display = "block";
+    wand.style.display = "block";
+    end = false;
 }
