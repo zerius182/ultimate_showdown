@@ -100,6 +100,7 @@ function resolveRound(){
     if (playerLives < 0){
         heroDeathSound.play();
         result = "You lie motionless on the floor, broken, bloodied, your life force fading away. As your vision turns black and sounds fade away you notice your opponent smirk as he sheathes his weapons and walks away from you, you have failed, 'the world is doomed' you think to yourself as you take your last, rattling breath.... "
+        end = true;
     }
 
     else if (villainLives < 0 && slaughtered <99){
@@ -114,8 +115,9 @@ function resolveRound(){
     }
     else if (villainLives < 0 && slaughtered === 99){
         villainDeathSound.play();
-        result = "Your opponet crumples into a lifeless heap on the floor, eyes glazed staring into nothingness. You wait for him to rise once more but he remains motionless. He is finally dead, the horror is over and the world is saved."
+        result = "Your opponent crumples into a lifeless heap on the floor, eyes glazed staring into nothingness. You wait for him to rise once more but he remains motionless. He is finally dead, the horror is over and the world is saved."
         moreSlaughter();
+        end = true;
     }
 }
 
@@ -123,8 +125,16 @@ function attackPhase(){
     resolveAttacks(playerAttack, villainAttack);
     resolveDamage(victor);
     resolveRound();
-    musicPlayerStart.play();
     updateBattleComm(result);
     updateMoves(playerAttack, villainAttack);
     console.log(playerLives, villainLives);
+    if (end){
+        shield.style.display = "none";
+        sword.style.display = "none";
+        wand.style.display = "none";
+        setTimeout(function(){refreshGame()}, 8000);
+    }
+    else{
+    musicPlayerStart.play();
+    }
 }
