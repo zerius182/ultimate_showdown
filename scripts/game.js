@@ -112,6 +112,11 @@ function resolveRound(){
             musicPlayerStart.src = "music/epic_battle_music.mp3";
         }
     }
+    else if (villainLives < 0 && slaughtered === 99){
+        villainDeathSound.play();
+        result = "Your opponet crumples into a lifeless heap on the floor, eyes glazed staring into nothingness. You wait for him to rise once more but he remains motionless. He is finally dead, the horror is over and the world is saved."
+        moreSlaughter();
+    }
 }
 
 function attackPhase(){
